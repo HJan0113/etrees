@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片识别</title>
+</head>
+<style>
+    h1{
+        color:#9dacdf;
+    }
+    .box{
+		min-width: 420px;
+        width:70%;
+        height:70%;
+        margin: auto;
+        overflow:hidden;
+/*        display: flex;
+        flex-wrap: nowrap; */
+
+    }
+    .box .inbox{
+		min-width: 200px;
+        width:88%;
+        height:450px;
+        margin: 4%;
+        border: 2px solid #ccc;
+        border-radius: 16px;
+    }
+	#right_box,#left_box{
+/* 		width: 400px;
+		height: 320px; */
+		float: left;
+	}
+	#main_box{
+/* 		width: 420px;
+		height:700px; */
+
+	}
+    #send{
+		margin-left: 4%;
+		text-align: center;
+		float: left;
+	width:85%;
+	height: 22px;
+	}
+</style>
+<body>
+    <h1 align="center">图片识别</h1>
+        <form enctype = 'multipart/form-data' method = 'POST'>
+            <div class="box" id="main_box">
+                <div class="inbox" align="center" id="left_box">
+                    <i>选择图片：</i>
+                    <input type="file" name = "original_pic" id="org" onchange="showImg()"/>
+                    <hr>
+                    <img src="" alt='' id='img_id' style='width:95%' >
+                </div>
+
+                <div id="send">
+				<input type="submit" value="上传图片" />
+				</div>
+
+                <div class="inbox" align="center" id="right_box">
+                    <i>识别结果：</i>
+                    <input type="hidden"  id="con" onchange="showImg2()"/>
+                    <hr>
+                    <img src="" alt='' id='img_id2' style='width:95%' >
+                </div>
+            </div>
+
+            <div align="center">
+        <input type="submit" value="上传图片" />
+      </div>
+
+
+
+        </form>
+
+
+</body>
+<script>
+    function showImg(){
+        var file = document.getElementById('org').files[0];
+        var re = new FileReader();
+        re.readAsDataURL(file);
+        re.onload = function(re){
+            document.getElementById('img_id').src=re.target.result;
+        }
+    }
+    function showImg2(){
+        var file = document.getElementById('con').files[0];
+        var re = new FileReader();
+        re.readAsDataURL(file);
+        re.onload = function(re){
+            document.getElementById('img_id2').src=re.target.result;
+        }
+    }
+</script>
+</html>

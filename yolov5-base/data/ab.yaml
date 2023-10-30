@@ -1,0 +1,6 @@
+train: "E:/yolov5-base_simple/paper_data/train.txt"
+val: "E:/yolov5-base_simple/paper_data/val.txt"
+
+nc: 26
+
+names: ['FQYBB', 'PGHXB','PTHFB','BCMBB','BCCD','YMDYBB','YMXYBB','FQHYB','FQJQBD','CMBFB','FQFMZMJ','FQWYBSMJ','PGXB','FQZYB', 'PGHBB', 'FQYBZJ', 'FQYMB', 'FQZZMSH', 'PGZBB', 'YMXB', 'BCJK', 'CMJK', 'FQJK', 'PGJK', 'PTJK', 'YMJK']   # 改成自己的类别

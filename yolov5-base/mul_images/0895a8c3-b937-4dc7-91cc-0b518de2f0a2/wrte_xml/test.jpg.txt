@@ -1,0 +1,26 @@
+<annotation>
+    <folder></folder>
+    <filename></filename>
+    <path></path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width></width>
+        <height></height>
+        <depth></depth>
+    </size>
+        <segmented></segmented>
+            
+        <object>
+            <name>FQYBB</name>
+            <pose>Unspecified</pose>
+            <truncated>1</truncated>
+            <difficult>0</difficult>
+            <bndbox>
+                <xmin>6.0</xmin>
+                <ymin>21.0</ymin>
+                <xmax>235.0</xmax>
+                <ymax>238.0</ymax>
+            </bndbox>
+        </object></annotation> 

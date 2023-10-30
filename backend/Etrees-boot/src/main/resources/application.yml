@@ -1,0 +1,50 @@
+server:
+  port: 8082
+#数据库配置
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/etrees
+    username: root
+    password: '${DB_PASSWORD}'
+#    redis 配置
+  redis:
+    port: 6379
+    host: 123.56.255.131
+    password: ${DB_PASSWORD}
+    #    连接池
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: 1000ms
+
+
+# mybatis配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true    #驼峰命名法
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #开启日志
+
+logging:
+  level:
+    org.mybatis: ERROR
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #开启mp日志
+  global-config:
+    db-config:
+      id-type: auto #id生成规则：数据库id自增
+
+aliyun:
+  oss:
+    endpoint: https://oss-cn-shanghai.aliyuncs.com
+    accessKeyId: ${ALIYUN_ACCESS_KEY_ID}
+    accessKeySecret: ${ALIYUN_ACCESS_KEY_SECRET}
+    bucketName: etrees

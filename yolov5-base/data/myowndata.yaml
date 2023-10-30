@@ -1,0 +1,7 @@
+train: "F:/PythonWorkSpace/yolov5-base/myowndata/Images/train/"
+val: "F:/PythonWorkSpace/yolov5-base/myowndata/Images/val/"
+test: "F:/PythonWorkSpace/yolov5-base/myowndata/Images/test/"
+#类别数量
+nc: 6
+#类别名称
+names: ["apple", "bayberry","lemon","peach","pear","plum"]

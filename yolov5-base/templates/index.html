@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+		h2{
+			font-size: 50px;
+			/*margin-top: 10%;*/
+		}
+	* {
+		margin: auto;
+		padding: 0;
+	  box-sizing: border-box;
+	  text-align: center;
+	}
+	#function_title{
+		/*margin-left: 120px;*/
+	}
+	.img-container {
+		margin-top:3%;
+	  float: left;
+	  width: 100%;
+	  padding: 5px;
+	}
+
+	.clearfix::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+	.clearfix{
+		margin: auto;
+		overflow:hidden;
+		width: 100%;
+	}
+	</style>
+  </head>
+  <body>
+  	<h2 id="function_title">Camera</h2>
+  	<div class="clearfix">
+  		<div class="img-container" align="center">
+        	<img src="{{ url_for('video_feed', feed_type='Camera_0') }}" class="center"   alt="camera">
+  		</div>
+	</div>
+  </body>
+</html>
